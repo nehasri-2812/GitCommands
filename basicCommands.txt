@@ -1,0 +1,54 @@
+1. Configuring Git (first-time setup)
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+
+Sets your identity for commits.
+Check settings: git config --list
+
+2. Initialize a repository
+git init
+
+
+Creates a new Git repository in the current folder.
+
+3. Check repository status
+git status
+
+
+Shows modified, staged, and untracked files.
+
+4. Add files to staging
+git add filename          # Add a specific file
+git add .                 # Add all new & modified files
+git add -A                # Add all changes (including deletions)
+
+5. Commit changes
+git commit -m "Your commit message"
+
+
+Saves staged changes to the local repository.
+
+6. View commit history
+git log
+git log --oneline        # Short format
+
+7. Rename or move files
+git mv oldname.txt newname.txt
+git commit -m "Renamed file"
+
+8. Undo changes
+git checkout -- filename    # Undo changes in working directory
+git reset HEAD filename     # Unstage a file
+git revert <commit_id>      # Revert a specific commit
+
+9. Stashing changes
+git stash           # Save uncommitted changes temporarily
+git stash list      # List all stashes
+git stash apply     # Restore changes without removing stash
+git stash pop       # Restore and remove stash
+
+10. Deleting files
+git rm filename           # Remove file and stage deletion
+git rm -r foldername      # Remove folder recursively
+git commit -m "Deleted file/folder"
